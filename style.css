@@ -490,3 +490,34 @@ footer{background:var(--bk2);border-top:1px solid rgba(217,4,41,.1);padding:clam
   .kv-grid{grid-template-columns:1fr;gap:1rem}
   .kv-vs{margin:0 auto}
 }
+
+/* ── SMY Agency References ── */
+.mission-agency{
+  margin-top:1.2rem;
+  font-size:clamp(.88rem,1.1vw,.95rem);
+  color:var(--w3);
+  font-weight:300;
+  border-left:3px solid var(--r);
+  padding-left:1rem;
+}
+.mission-agency a{
+  color:var(--r);
+  text-decoration:none;
+  font-weight:600;
+  transition:opacity .2s;
+}
+.mission-agency a:hover{opacity:.75}
+
+.fagency{
+  font-size:.75rem;
+  color:var(--w3);
+  margin-top:.5rem !important;
+  font-weight:300;
+}
+.fagency a{
+  color:var(--w3);
+  text-decoration:none;
+  border-bottom:1px solid rgba(217,4,41,.3);
+  transition:color .2s,border-color .2s;
+}
+.fagency a:hover{color:var(--r);border-color:var(--r)}
