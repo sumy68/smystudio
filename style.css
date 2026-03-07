@@ -225,7 +225,7 @@ p{font-size:clamp(.95rem,1.15vw,1.02rem);line-height:1.8;font-weight:300;color:v
 .bridge-arrow svg{fill:var(--r)}
 /* Before/After Bilder */
 .ba-wrap{display:grid;grid-template-columns:1fr 1fr;gap:4px;border-radius:3px;overflow:hidden;max-width:900px;margin:0 auto}
-.ba-panel{height:clamp(220px,30vw,380px);position:relative;overflow:hidden}
+.ba-panel{position:relative;overflow:hidden}
 .ba-panel.bef{background:linear-gradient(140deg,#0c0c0c,#181010,#100808)}
 .ba-panel.aft{background:linear-gradient(140deg,#1e0008,#3a0012,#1c0008)}
 .ba-panel svg{position:absolute;inset:0;width:100%;height:100%;opacity:.14}
@@ -521,3 +521,60 @@ footer{background:var(--bk2);border-top:1px solid rgba(217,4,41,.1);padding:clam
   transition:color .2s,border-color .2s;
 }
 .fagency a:hover{color:var(--r);border-color:var(--r)}
+
+/* ── Foto Platzhalter ── */
+.ba-img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;background:#111}
+.offer-photo{width:100%;height:100%;object-fit:cover;border-radius:4px;display:block}
+.tm-img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:4px;display:block}
+.tcard-img{width:100%;height:100%;object-fit:cover;display:block;border-radius:4px 4px 0 0}
+
+/* ══ ÜBER MICH ══ */
+#team{padding:clamp(5rem,8vw,8rem) 0}
+.ueber-mich{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(3rem,6vw,6rem);align-items:center}
+.um-photo{border-radius:4px;overflow:hidden;position:relative}
+.um-photo::before{content:'';position:absolute;inset:0;border:2px solid rgba(217,4,41,.15);border-radius:4px;z-index:1;pointer-events:none}
+.um-img{width:100%;height:auto;display:block;border-radius:4px;object-fit:cover;object-position:top}
+.um-h3{font-family:var(--h);font-size:clamp(1.6rem,3vw,2.6rem);font-weight:800;line-height:1.1;margin:0.6rem 0 1.5rem}
+.um-h3 em{color:var(--r);font-style:normal}
+.um-bio{font-size:clamp(.9rem,1.1vw,.98rem);color:var(--w2);font-weight:300;line-height:1.8;margin-bottom:1rem}
+.um-bio a{color:var(--r);text-decoration:none;font-weight:600}
+.um-bio a:hover{opacity:.75}
+.um-stats{display:flex;gap:2.5rem;margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.07)}
+.um-stat{display:flex;flex-direction:column;gap:.2rem}
+.um-stat-n{font-family:var(--h);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;color:var(--r)}
+.um-stat-l{font-size:.78rem;color:var(--w3);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+
+@media(max-width:768px){
+  .ueber-mich{grid-template-columns:1fr}
+  .um-photo{max-width:320px;margin:0 auto}
+  .um-stats{gap:1.5rem}
+}
+
+/* ══ REVIEW CARDS (Google Style) ══ */
+.rcard{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:8px;
+  padding:1.5rem;
+  display:flex;
+  flex-direction:column;
+  gap:.8rem;
+  transition:border-color .2s,transform .2s;
+}
+.rcard:hover{border-color:rgba(217,4,41,.25);transform:translateY(-3px)}
+.rcard-top{display:flex;align-items:center;gap:.8rem}
+.rcard-av{
+  width:42px;height:42px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--h);font-size:.72rem;font-weight:700;
+  color:#fff;flex-shrink:0;letter-spacing:.03em;
+}
+.rcard-name{font-family:var(--h);font-size:.88rem;font-weight:700;color:var(--w)}
+.rcard-role{font-size:.75rem;color:var(--w3);margin-top:.1rem}
+.rcard-g{margin-left:auto;flex-shrink:0;opacity:.7}
+.rcard-stars{color:#fbbc04;font-size:1rem;letter-spacing:.1em}
+.rcard-quote{font-size:.88rem;color:var(--w2);line-height:1.7;font-weight:300;font-style:italic}
+
+/* ── Mockup Cards mit Fotos ── */
+.mock-card-img{padding:0;overflow:hidden;background:none}
+.mock-photo{width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;min-height:280px}
