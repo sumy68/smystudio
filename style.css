@@ -578,3 +578,138 @@ footer{background:var(--bk2);border-top:1px solid rgba(217,4,41,.1);padding:clam
 /* ── Mockup Cards mit Fotos ── */
 .mock-card-img{padding:0;overflow:hidden;background:none}
 .mock-photo{width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;min-height:280px}
+
+/* ── Video in Mockup Cards ── */
+.mock-card-img video.mock-photo{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+  border-radius:inherit;min-height:280px;
+}
+
+/* ══ KI-VIDEO SECTION ══ */
+.video-preview{position:relative}
+.video-play-badge{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:60px;height:60px;border-radius:50%;
+  background:rgba(217,4,41,.9);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 30px rgba(217,4,41,.4);
+  pointer-events:none;
+}
+
+/* ══ MOBILE RESPONSIVE – COMPLETE OVERHAUL ══ */
+@media(max-width:768px){
+
+  /* Hero */
+  .hero-inner{padding:6rem 1.2rem 3rem}
+  .hero-h1{font-size:clamp(2.2rem,10vw,3.5rem) !important}
+  .hero-tagline{font-size:.85rem}
+  .hero-wlwl{font-size:.72rem}
+  .hero-mockup{display:none} /* hide mockup cards on mobile */
+  .rating-block{flex-direction:column;gap:.5rem;text-align:center}
+
+  /* Kostenvergleich */
+  .kv-grid{grid-template-columns:1fr !important;gap:1rem}
+  .kv-vs{margin:0 auto}
+  .kv-h2{font-size:2rem !important}
+
+  /* Mission */
+  .mission-wrap{padding:0 1rem}
+  .mission-h2{font-size:1.8rem}
+
+  /* Bridge */
+  .ba-wrap{grid-template-columns:1fr !important}
+  .bridge-inner{padding:0 1rem}
+
+  /* Offer sections */
+  .offer-layout{grid-template-columns:1fr !important;gap:2rem}
+  .offer-img{min-height:220px;order:-1}
+  .offer-h4{font-size:1.6rem}
+
+  /* Krisenfest */
+  .kf-layout{grid-template-columns:1fr !important;gap:2rem}
+  .kf-img{order:-1;min-height:220px}
+  .kf-stats{gap:1.5rem}
+  .kf-stat-n{font-size:1.6rem}
+
+  /* Über mich */
+  .ueber-mich{grid-template-columns:1fr !important;gap:2rem}
+  .um-photo{max-width:280px;margin:0 auto}
+  .um-h3{font-size:1.6rem}
+  .um-stats{gap:1.2rem;flex-wrap:wrap}
+
+  /* Review cards */
+  .tg{grid-template-columns:1fr !important}
+
+  /* Weitere Kundenstimmen */
+  .ms-grid{grid-template-columns:1fr !important}
+
+  /* Form */
+  .frow{grid-template-columns:1fr !important}
+  .form-cx h2{font-size:1.8rem}
+
+  /* Header */
+  .hd-nav{display:none}
+  .hdcta{display:none}
+
+  /* Footer */
+  .ft-grid{grid-template-columns:1fr !important;gap:2rem}
+
+  /* General */
+  .wrap{padding:0 1.2rem}
+  .section-label{font-size:.6rem}
+  .btn{font-size:.82rem;padding:.85rem 1.8rem}
+  .cta-badges{flex-wrap:wrap;justify-content:center}
+
+  /* KV */
+  .kv-col{padding:1.2rem}
+}
+
+@media(max-width:480px){
+  .hero-h1{font-size:1.9rem !important}
+  .offer-h4{font-size:1.3rem}
+  .kv-h2{font-size:1.6rem !important}
+  .um-stats{gap:1rem}
+  .um-stat-n{font-size:1.8rem}
+  .testi-h1,.ms-h1{font-size:1.6rem}
+  .form-cx h2{font-size:1.5rem}
+  .kf-stat-n{font-size:1.3rem}
+}
+
+/* ══ VIDEO TEASER SECTION ══ */
+#video-teaser{padding:clamp(4rem,7vw,7rem) 0;background:var(--bk2)}
+.vt-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,5vw,6rem);align-items:center}
+.vt-h2{font-family:var(--h);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;line-height:1.05;margin:.6rem 0 1.2rem}
+.vt-h2 em{color:var(--r);font-style:normal}
+.vt-sub{font-size:clamp(.9rem,1.1vw,.98rem);color:var(--w2);font-weight:300;line-height:1.8;margin-bottom:1.2rem}
+.vt-list{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.vt-list li{font-size:.9rem;color:var(--w2);font-weight:300}
+.vt-list li::first-letter{color:var(--r)}
+
+.vt-video{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.vt-vid{width:100%;height:auto;display:block;border-radius:12px}
+.vt-badge{
+  position:absolute;top:1rem;left:1rem;
+  background:rgba(217,4,41,.9);
+  color:#fff;font-family:var(--h);font-size:.65rem;font-weight:700;
+  padding:.3rem .7rem;border-radius:20px;letter-spacing:.08em;
+}
+
+@media(max-width:768px){
+  .vt-inner{grid-template-columns:1fr}
+  .vt-video{max-width:360px;margin:0 auto}
+}
+
+/* ── Mute Button ── */
+.vt-mute-btn{
+  position:absolute;bottom:1rem;right:1rem;
+  display:flex;align-items:center;gap:.4rem;
+  background:rgba(0,0,0,.6);
+  border:1px solid rgba(255,255,255,.2);
+  color:#fff;font-family:var(--h);font-size:.65rem;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;
+  padding:.4rem .8rem;border-radius:20px;
+  cursor:pointer;backdrop-filter:blur(4px);
+  transition:background .2s;
+}
+.vt-mute-btn:hover{background:rgba(217,4,41,.8)}

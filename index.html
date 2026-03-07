@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMY STUDIO – Premium KI-Brandfotos</title>
+  <title>SMY STUDIO – Premium KI-Brandfotos & KI-Videos</title>
   <meta name="description" content="Premium KI-Brandfotos für Personal Brands, Beauty Clinics & E-Commerce. Professionelle Visuals in 48–72h – ohne Fotoshooting.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +18,8 @@
 <section id="hero">
   <div class="hero-inner wrap">
 
-    <h1 class="hero-h1 rv">PREMIUM KI-BRANDFOTOS<br>FÜR DEINE MARKE</h1>
-    <p class="hero-tagline rv d1">für unsere kunden und uns – seit dem ersten tag</p>
+    <h1 class="hero-h1 rv">PREMIUM KI-VISUALS<br>FÜR DEINE MARKE</h1>
+    <p class="hero-tagline rv d1">KI-Brandfotos & KI-Videos – für Brands die auffallen</p>
     <p class="hero-wlwl rv d2">WIR LEBEN, WAS WIR PRODUZIEREN</p>
 
     <div class="hero-mockup rv d3">
@@ -27,15 +27,24 @@
         <div class="mockup-cards">
 
           <div class="mock-card mock-card-img" style="transform:rotate(-5deg) translateY(14px)">
-            <img src="fotos/mockup-1.jpg" alt="KI-Brandfoto Beispiel 1" class="mock-photo">
+            <video class="mock-photo" autoplay muted loop playsinline poster="fotos/mockup-1.jpg">
+              <source src="fotos/mockup-1.mp4" type="video/mp4">
+              <img src="fotos/mockup-1.jpg" alt="KI-Brandfoto Beispiel 1" class="mock-photo">
+            </video>
           </div>
 
           <div class="mock-card mock-card-img" style="transform:rotate(0deg) translateY(-16px);flex:1.3;max-width:310px">
-            <img src="fotos/mockup-2.jpg" alt="KI-Brandfoto Beispiel 2" class="mock-photo">
+            <video class="mock-photo" autoplay muted loop playsinline poster="fotos/mockup-2.jpg">
+              <source src="fotos/mockup-2.mp4" type="video/mp4">
+              <img src="fotos/mockup-2.jpg" alt="KI-Brandfoto Beispiel 2" class="mock-photo">
+            </video>
           </div>
 
           <div class="mock-card mock-card-img" style="transform:rotate(4deg) translateY(12px)">
-            <img src="fotos/mockup-3.jpg" alt="KI-Brandfoto Beispiel 3" class="mock-photo">
+            <video class="mock-photo" autoplay muted loop playsinline poster="fotos/mockup-3.jpg">
+              <source src="fotos/mockup-3.mp4" type="video/mp4">
+              <img src="fotos/mockup-3.jpg" alt="KI-Brandfoto Beispiel 3" class="mock-photo">
+            </video>
           </div>
 
         </div>
@@ -60,6 +69,38 @@
 
 
 
+
+<!-- ══ VIDEO TEASER ══ -->
+<section id="video-teaser">
+  <div class="wrap">
+    <div class="vt-inner rv">
+      <div class="vt-text">
+        <span class="section-label">Neu bei SMY STUDIO</span>
+        <h2 class="vt-h2">Jetzt auch:<br><em>KI-Brand Videos</em></h2>
+        <p class="vt-sub">Reels, Stories & Motion Visuals – KI-generiert, hook-optimiert, in 48h geliefert. Kein Drehtag. Keine Kamera. Nur Ergebnisse.</p>
+        <ul class="vt-list">
+          <li>✦ Instagram Reels & TikTok Videos (9:16)</li>
+          <li>✦ LinkedIn Motion Visuals</li>
+          <li>✦ Ads Video Creatives</li>
+          <li>✦ Gleiche Ästhetik wie deine Fotos</li>
+        </ul>
+        <a href="#ctaform" class="btn btn-r" style="margin-top:1.5rem">Jetzt Video-Demo anfragen</a>
+      </div>
+      <div class="vt-video">
+        <video class="vt-vid" id="vt-vid" autoplay muted loop playsinline>
+          <source src="fotos/video-teaser.mp4" type="video/mp4">
+        </video>
+        <button class="vt-mute-btn" id="vt-mute" onclick="toggleMute('vt-vid','vt-mute')" title="Ton ein/aus">
+          <svg id="vt-mute-icon" viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M16.5 12A4.5 4.5 0 0 0 14 7.97v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.796 8.796 0 0 0 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06A8.99 8.99 0 0 0 17.73 18L19 19.27 20.27 18 5.27 3 4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+          <svg id="vt-sound-icon" viewBox="0 0 24 24" width="18" height="18" fill="#fff" style="display:none"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+          <span id="vt-mute-label">Ton an</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
 <!-- ══ KOSTENVERGLEICH ══ -->
 <section id="kostenvergleich">
   <div class="wrap">
@@ -129,7 +170,7 @@
       <span class="section-label">Unsere Mission</span>
       <h2 class="mission-h2">Unsere Mission<br>ist <em>klar</em></h2>
       <div class="mission-text">
-        <p>Wir helfen Personal Brands, Beauty Clinics und E-Commerce-Marken dabei, sich visuell so aufzustellen, dass ihre Marke nicht nur sichtbar, sondern spürbar wird.</p>
+        <p>Wir helfen Personal Brands, Beauty Clinics und E-Commerce-Marken dabei, sich visuell so aufzustellen, dass ihre Marke nicht nur sichtbar, sondern spürbar wird – mit KI-Brandfotos <em>und</em> KI-Videos.</p>
         <p>Dabei setzen wir auf Qualität statt Quantität – und auf durchdachte Art Direction statt „nimm einfach irgendein KI-Bild"-Mentalität.<br>
         Wer heute visuell sichtbar sein will, braucht mehr als generierte Bilder und Buzzwords.<br>
         Es geht darum, Vertrauen aufzubauen, Ästhetik zu transportieren und eine Marke zu schaffen, die sich wirklich von allen anderen unterscheidet.</p>
@@ -240,6 +281,49 @@
   </div>
 </div>
 
+
+<!-- ══ ANGEBOT 2b: KI-Brand Videos ══ -->
+<div id="angebot-video" class="offer-section" style="background:var(--bk)">
+  <div class="wrap">
+    <div class="offer-layout rv">
+      <!-- Text -->
+      <div>
+        <span class="offer-label">KI-Brand Videos & Reels</span>
+        <h4 class="offer-h4">Bewegtbild, das<br><span style="color:var(--r)">wirklich bewegt</span></h4>
+        <p class="offer-subtitle">KI-generierte Videos für Instagram, TikTok & LinkedIn – in 48h.</p>
+        <p class="offer-text">Static Posts reichen heute nicht mehr. Wer auf Social Media sichtbar bleiben will, braucht Bewegtbild – und zwar regelmäßig, konsistent und in Qualität. Mit unseren KI-Brand Videos bekommst du professionelle Reels und Motion Visuals, ohne Kamera, ohne Crew, ohne Aufwand.<br><br>
+        Für alle, die Content produzieren wollen – ohne einen Drehtag dafür zu opfern.</p>
+        <ul class="offer-feats">
+          <li><strong>Reels & Stories:</strong> Vertikale Videos (9:16) für Instagram und TikTok – direkt upload-ready.</li>
+          <li><strong>LinkedIn Motion Visuals:</strong> Horizontale Brand-Videos für professionelle Präsenz.</li>
+          <li><strong>Konsistente Bildsprache:</strong> Passend zu deinen Fotos – gleicher Look, gleiche Ästhetik.</li>
+          <li><strong>Lieferung in 48–72h:</strong> Kein Drehtag, keine Kamera, kein Schnitt von deiner Seite.</li>
+          <li><strong>Hook-optimiert:</strong> Erste 3 Sekunden designed für maximale Stopp-Rate im Feed.</li>
+        </ul>
+        <div class="cta-block">
+          <a href="#ctaform" class="btn btn-r">Jetzt Video-Demo anfragen</a>
+          <div class="cta-meta">
+            <span>Kostenlos testen</span>
+            <span>Unverbindlich</span>
+          </div>
+        </div>
+      </div>
+      <!-- Visual -->
+      <div class="offer-img video-preview">
+        <video class="offer-photo" id="av-vid" autoplay muted loop playsinline style="border-radius:4px">
+          <source src="fotos/ki-video.mp4" type="video/mp4">
+        </video>
+        <button class="vt-mute-btn" id="av-mute" onclick="toggleMute('av-vid','av-mute')" title="Ton ein/aus">
+          <svg id="av-mute-icon" viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M16.5 12A4.5 4.5 0 0 0 14 7.97v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.796 8.796 0 0 0 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06A8.99 8.99 0 0 0 17.73 18L19 19.27 20.27 18 5.27 3 4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+          <svg id="av-sound-icon" viewBox="0 0 24 24" width="18" height="18" fill="#fff" style="display:none"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+          <span>Ton an</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="div"></div>
 <!-- ══ KRISENFEST ══ -->
 <div id="krisenfest">
   <div class="wrap">
@@ -250,7 +334,7 @@
       </div>
       <!-- Text -->
       <div>
-        <span class="offer-label">Marke sein heißt</span>
+        <span class="offer-label">Fotos & Videos – alles aus einer Hand</span>
         <h4 class="kf-h">Marke sein heißt: <span style="color:var(--r)">Krisenfest bleiben</span></h4>
         <p class="kf-sub">Geh mit uns gemeinsam den Weg für schnelleren Erfolg</p>
         <div class="kf-stats">

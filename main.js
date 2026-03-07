@@ -11,6 +11,7 @@ const HEADER_HTML = `
       <nav class="nd">
         <a href="#mission">Über uns</a>
         <a href="#angebot1">KI-Brandfotos</a>
+        <a href="#angebot-video">KI-Videos</a>
         <a href="#angebot2">Kampagnen</a>
         <a href="#angebot3">Ads Creatives</a>
         <a href="#team">Unser Team</a>
@@ -28,9 +29,10 @@ const HEADER_HTML = `
 <div class="dov" id="dov"></div>
 <nav class="drw" id="drw">
   <a href="#mission"   class="dl">Über uns</a>
-  <a href="#angebot1"  class="dl">KI-Brandfotos</a>
-  <a href="#angebot2"  class="dl">Kampagnen</a>
-  <a href="#angebot3"  class="dl">Ads Creatives</a>
+  <a href="#angebot1"     class="dl">KI-Brandfotos</a>
+  <a href="#angebot-video" class="dl">KI-Videos</a>
+  <a href="#angebot2"     class="dl">Kampagnen</a>
+  <a href="#angebot3"     class="dl">Ads Creatives</a>
   <a href="#team"      class="dl">Unser Team</a>
   <a href="#testi"     class="dl">Kundenstimmen</a>
   <a href="#ctaform"   class="btn btn-r dl" style="justify-content:center;margin-top:1rem">Demo anfragen</a>
@@ -51,6 +53,7 @@ const FOOTER_HTML = `
         <h5>Leistungen</h5>
         <div class="flinks">
           <a href="#angebot1">Personal Brand Visuals</a>
+          <a href="#angebot-video">KI-Brand Videos</a>
           <a href="#angebot2">Brand Campaign Visuals</a>
           <a href="#angebot3">Ads Creatives</a>
         </div>
@@ -226,5 +229,25 @@ async function submitForm() {
     btn.disabled = false;
     btn.textContent = 'Jetzt Demo anfragen →';
     alert('Netzwerkfehler. Bitte versuche es erneut.');
+  }
+}
+
+// ── Mute Toggle ──
+function toggleMute(videoId, btnId) {
+  const vid = document.getElementById(videoId);
+  const btn = document.getElementById(btnId);
+  if (!vid) return;
+  vid.muted = !vid.muted;
+  const muteIcon  = btn.querySelector('[id$="-mute-icon"]');
+  const soundIcon = btn.querySelector('[id$="-sound-icon"]');
+  const label     = btn.querySelector('span');
+  if (vid.muted) {
+    if (muteIcon)  muteIcon.style.display  = '';
+    if (soundIcon) soundIcon.style.display = 'none';
+    if (label) label.textContent = 'Ton an';
+  } else {
+    if (muteIcon)  muteIcon.style.display  = 'none';
+    if (soundIcon) soundIcon.style.display = '';
+    if (label) label.textContent = 'Ton aus';
   }
 }
