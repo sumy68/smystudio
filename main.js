@@ -7,17 +7,17 @@ const HEADER_HTML = `
 <header id="hdr">
   <div class="wrap">
     <div class="hi">
-      <a href="#" class="logo">SMY <em>STUDIO</em></a>
+      <a href="index.html" class="logo">SMY <em>STUDIO</em></a>
       <nav class="nd">
-        <a href="#mission">Über uns</a>
-        <a href="#angebot1">KI-Brandfotos</a>
-        <a href="#angebot-video">KI-Videos</a>
-        <a href="#angebot2">Kampagnen</a>
-        <a href="#angebot3">Ads Creatives</a>
-        <a href="#team">Unser Team</a>
-        <a href="#testi">Kundenstimmen</a>
+        <a href="index.html#mission">Über uns</a>
+        <a href="index.html#angebot1">KI-Brandfotos</a>
+        <a href="index.html#angebot-video">KI-Videos</a>
+        <a href="index.html#angebot2">Kampagnen</a>
+        <a href="index.html#angebot3">Ads Creatives</a>
+        <a href="index.html#team">Über mich</a>
+        <a href="index.html#testi">Kundenstimmen</a>
       </nav>
-      <a href="#ctaform" class="btn btn-r hdcta">Demo anfragen</a>
+      <a href="index.html#ctaform" class="btn btn-r hdcta">Demo anfragen</a>
       <button class="brg" id="brg">
         <span></span><span></span><span></span>
       </button>
@@ -28,14 +28,14 @@ const HEADER_HTML = `
 <!-- Mobile overlay + drawer -->
 <div class="dov" id="dov"></div>
 <nav class="drw" id="drw">
-  <a href="#mission"   class="dl">Über uns</a>
-  <a href="#angebot1"     class="dl">KI-Brandfotos</a>
-  <a href="#angebot-video" class="dl">KI-Videos</a>
-  <a href="#angebot2"     class="dl">Kampagnen</a>
-  <a href="#angebot3"     class="dl">Ads Creatives</a>
-  <a href="#team"      class="dl">Unser Team</a>
-  <a href="#testi"     class="dl">Kundenstimmen</a>
-  <a href="#ctaform"   class="btn btn-r dl" style="justify-content:center;margin-top:1rem">Demo anfragen</a>
+  <a href="index.html#mission"       class="dl">Über uns</a>
+  <a href="index.html#angebot1"      class="dl">KI-Brandfotos</a>
+  <a href="index.html#angebot-video" class="dl">KI-Videos</a>
+  <a href="index.html#angebot2"      class="dl">Kampagnen</a>
+  <a href="index.html#angebot3"      class="dl">Ads Creatives</a>
+  <a href="index.html#team"          class="dl">Über mich</a>
+  <a href="index.html#testi"         class="dl">Kundenstimmen</a>
+  <a href="index.html#ctaform" class="btn btn-r dl" style="justify-content:center;margin-top:1rem">Demo anfragen</a>
 </nav>
 `;
 
@@ -45,34 +45,33 @@ const FOOTER_HTML = `
   <div class="wrap">
     <div class="ftop">
       <div class="fbrand">
-        <a href="#" class="logo">SMY <em>STUDIO</em></a>
+        <a href="index.html" class="logo">SMY <em>STUDIO</em></a>
         <p>Premium KI-Brandfotos für Personal Brands, Beauty Clinics &amp; E-Commerce – in 48–72h.</p>
-        <a href="#ctaform" class="btn btn-ol" style="font-size:.8rem;padding:.75rem 1.8rem">Demo anfragen</a>
+        <a href="index.html#ctaform" class="btn btn-ol" style="font-size:.8rem;padding:.75rem 1.8rem">Demo anfragen</a>
       </div>
       <div class="fcol">
         <h5>Leistungen</h5>
         <div class="flinks">
-          <a href="#angebot1">Personal Brand Visuals</a>
-          <a href="#angebot-video">KI-Brand Videos</a>
-          <a href="#angebot2">Brand Campaign Visuals</a>
-          <a href="#angebot3">Ads Creatives</a>
+          <a href="index.html#angebot1">Personal Brand Visuals</a>
+          <a href="index.html#angebot-video">KI-Brand Videos</a>
+          <a href="index.html#angebot2">Brand Campaign Visuals</a>
+          <a href="index.html#angebot3">Ads Creatives</a>
         </div>
       </div>
       <div class="fcol">
         <h5>Rechtliches</h5>
         <div class="flinks">
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
-          <a href="#">AGB</a>
-          <a href="#ctaform">Kontakt</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="index.html#ctaform">Kontakt</a>
         </div>
       </div>
     </div>
     <div class="fbot">
       <span>Copyright &copy; 2025 – SMY STUDIO</span>
       <div style="display:flex;gap:1.5rem">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
       </div>
     </div>
   </div>
@@ -215,7 +214,6 @@ async function submitForm() {
     });
 
     if (response.ok) {
-      // Show success state
       document.getElementById('dfw').style.display = 'none';
       const success = document.getElementById('fsucc');
       success.classList.add('on');

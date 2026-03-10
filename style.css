@@ -1168,3 +1168,107 @@ footer{background:var(--bk2);border-top:1px solid rgba(217,4,41,.1);padding:clam
     min-height: 150px !important;
   }
 }
+
+ /* ══════════════════════════════════════════════
+   IMPRESSUM & DATENSCHUTZ – ans Ende von style.css
+══════════════════════════════════════════════ */
+
+.imp-hero {
+  padding: clamp(8rem, 12vw, 12rem) 0 clamp(3rem, 5vw, 5rem);
+  background: var(--bk);
+  border-bottom: 1px solid rgba(217,4,41,.1);
+}
+.imp-hero h1 {
+  font-family: var(--h);
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  line-height: .95;
+  color: var(--r);
+  margin-bottom: 1rem;
+}
+.imp-hero p {
+  font-family: var(--h);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--w3);
+}
+.imp-body {
+  background: var(--bk);
+  padding: clamp(4rem, 7vw, 7rem) 0;
+}
+.imp-content {
+  max-width: 720px;
+}
+.imp-content h2 {
+  font-family: var(--h);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--r);
+  margin: 2.5rem 0 .8rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(217,4,41,.12);
+}
+.imp-content h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.imp-content p {
+  font-size: clamp(.9rem, 1.1vw, 1rem);
+  color: var(--w2);
+  font-weight: 300;
+  line-height: 1.85;
+  margin-bottom: .75rem;
+}
+.imp-content ul {
+  margin: .5rem 0 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.imp-content ul li {
+  font-size: clamp(.9rem, 1.1vw, 1rem);
+  color: var(--w2);
+  font-weight: 300;
+  line-height: 1.7;
+  list-style: disc;
+}
+.imp-content a {
+  color: var(--r);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(217,4,41,.3);
+  transition: border-color .2s;
+  word-break: break-all;
+}
+.imp-content a:hover {
+  border-color: var(--r);
+}
+.imp-content strong {
+  color: var(--w);
+  font-weight: 600;
+}
+.imp-widerspruch {
+  background: rgba(217,4,41,.05);
+  border: 1px solid rgba(217,4,41,.15);
+  border-radius: 4px;
+  padding: 1.2rem 1.5rem;
+  margin: 1rem 0;
+}
+.imp-widerspruch p {
+  font-size: .85rem !important;
+  letter-spacing: .03em;
+  color: var(--w2) !important;
+}
+.imp-stand {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,.05);
+  font-size: .75rem !important;
+  color: var(--w3) !important;
+}
