@@ -713,3 +713,458 @@ footer{background:var(--bk2);border-top:1px solid rgba(217,4,41,.1);padding:clam
   transition:background .2s;
 }
 .vt-mute-btn:hover{background:rgba(217,4,41,.8)}
+
+/* ══════════════════════════════════════════════
+   SMY STUDIO – MOBILE FIX PATCH
+   Ans Ende von style.css einfügen
+══════════════════════════════════════════════ */
+
+/* ── FIX 1: rv-Reveal Fallback für iOS Safari ──
+   Wenn JS nicht feuert, bleiben alle .rv Elemente opacity:0
+   → Nach 1.5s automatisch einblenden                        */
+   @media (max-width: 1024px) {
+    .rv {
+      animation: rv-fallback 0.6s ease 1.5s forwards;
+    }
+    .rv.on {
+      animation: none;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @keyframes rv-fallback {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  /* ── FIX 2: Overflow & Scroll ── */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* ── FIX 3: Hero Section Mobile ── */
+  @media (max-width: 768px) {
+    #hero {
+      min-height: 100svh; /* safe viewport height für iOS */
+      padding-top: 70px;
+      padding-bottom: 3rem;
+    }
+  
+    .hero-inner {
+      padding: 2rem 1.2rem 2rem;
+      gap: 1.2rem;
+    }
+  
+    .hero-h1 {
+      font-size: clamp(2rem, 11vw, 3rem) !important;
+      margin-bottom: 0.8rem;
+    }
+  
+    .hero-tagline {
+      font-size: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+  
+    .hero-wlwl {
+      font-size: 0.68rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .rating-block {
+      margin-top: 1.5rem;
+      flex-direction: column;
+      gap: 0.4rem;
+      text-align: center;
+    }
+  
+    .rating-txt {
+      font-size: 0.76rem;
+    }
+  }
+  
+  /* ── FIX 4: Video Teaser ── */
+  @media (max-width: 768px) {
+    #video-teaser {
+      padding: 3rem 0;
+    }
+  
+    .vt-inner {
+      grid-template-columns: 1fr !important;
+      gap: 2rem;
+    }
+  
+    .vt-text {
+      order: 1;
+    }
+  
+    .vt-video {
+      order: 2;
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    .vt-vid {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+    }
+  
+    .vt-h2 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* ── FIX 5: Kostenvergleich ── */
+  @media (max-width: 768px) {
+    #kostenvergleich {
+      padding: 3rem 0;
+    }
+  
+    .kv-grid {
+      grid-template-columns: 1fr !important;
+      gap: 0;
+    }
+  
+    .kv-col {
+      border-radius: 0;
+    }
+  
+    .kv-old {
+      border-radius: 4px 4px 0 0;
+    }
+  
+    .kv-vs {
+      border-radius: 0;
+      width: 100%;
+      height: 44px;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+      font-size: 0.85rem;
+    }
+  
+    .kv-new {
+      border-radius: 0 0 4px 4px;
+    }
+  
+    .kv-h2 {
+      font-size: clamp(1.6rem, 8vw, 2.2rem) !important;
+      line-height: 1.1;
+    }
+  }
+  
+  /* ── FIX 6: Offer Sections ── */
+  @media (max-width: 768px) {
+    .offer-section {
+      padding: 3rem 0;
+    }
+  
+    .offer-layout {
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem;
+    }
+  
+    .offer-img {
+      min-height: 220px;
+      order: -1 !important;
+    }
+  
+    .offer-h4 {
+      font-size: 1.4rem;
+    }
+  
+    .offer-text {
+      font-size: 0.92rem;
+    }
+  
+    .offer-feats {
+      gap: 0.65rem;
+    }
+  
+    .cta-block {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+  
+    /* Video preview in Angebot-Video Section */
+    .video-preview {
+      min-height: 240px;
+      order: -1 !important;
+    }
+  
+    #angebot-video .offer-layout > div:first-child {
+      order: 2;
+    }
+  }
+  
+  /* ── FIX 7: Krisenfest ── */
+  @media (max-width: 768px) {
+    #krisenfest {
+      padding: 3rem 0;
+    }
+  
+    .kf-layout {
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem;
+    }
+  
+    .kf-img {
+      order: -1;
+      min-height: 200px;
+    }
+  
+    .kf-h {
+      font-size: 1.4rem;
+    }
+  
+    .kf-stats {
+      gap: 1.2rem;
+    }
+  
+    .kf-stat-n {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* ── FIX 8: Team Section ── */
+  @media (max-width: 768px) {
+    #team {
+      padding: 3rem 0;
+    }
+  
+    .team-member {
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      max-width: 100% !important;
+      margin: 0 !important;
+    }
+  
+    .tm-photo {
+      min-height: 260px;
+      order: -1;
+    }
+  
+    .tm-h5 {
+      font-size: 1.6rem;
+    }
+  
+    .tm-stat-row {
+      flex-wrap: wrap;
+    }
+  }
+  
+  /* ── FIX 9: Kundenstimmen ── */
+  @media (max-width: 768px) {
+    #testi {
+      padding: 3rem 0;
+    }
+  
+    .testi-h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .tg {
+      grid-template-columns: 1fr !important;
+      gap: 0.6rem;
+    }
+  
+    .rcard {
+      padding: 1.2rem;
+    }
+  
+    .rcard-quote {
+      font-size: 0.84rem;
+    }
+  }
+  
+  /* ── FIX 10: Weitere Stimmen ── */
+  @media (max-width: 768px) {
+    #mehr-stimmen {
+      padding: 3rem 0;
+    }
+  
+    .ms-h1 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .ms-grid {
+      grid-template-columns: 1fr !important;
+      gap: 0.5rem;
+    }
+  }
+  
+  /* ── FIX 11: CTA Form ── */
+  @media (max-width: 768px) {
+    #ctaform {
+      padding: 3rem 0;
+    }
+  
+    .form-cx {
+      padding: 0;
+    }
+  
+    .form-cx h2 {
+      font-size: 1.6rem;
+    }
+  
+    .frow {
+      grid-template-columns: 1fr !important;
+      gap: 0;
+    }
+  
+    .ff input,
+    .ff select {
+      font-size: 16px; /* verhindert Auto-Zoom auf iOS! */
+    }
+  
+    .fsubw .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  /* ── FIX 12: Before/After ── */
+  @media (max-width: 768px) {
+    .ba-wrap {
+      grid-template-columns: 1fr !important;
+    }
+  
+    .ba-img {
+      min-height: 200px;
+    }
+  }
+  
+  /* ── FIX 13: Bridge Sections ── */
+  @media (max-width: 768px) {
+    #bridge,
+    #bridge2 {
+      padding: 2.5rem 0;
+    }
+  
+    .bridge-h3 {
+      font-size: 1rem;
+    }
+  
+    .bridge2-inner h3 {
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* ── FIX 14: Mission ── */
+  @media (max-width: 768px) {
+    #mission {
+      padding: 3rem 0;
+    }
+  
+    .mission-h2 {
+      font-size: 1.6rem;
+    }
+  
+    .mission-text {
+      font-size: 0.92rem;
+    }
+  }
+  
+  /* ── FIX 15: Allgemeine Section Abstände ── */
+  @media (max-width: 480px) {
+    .section-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+    }
+  
+    .btn {
+      font-size: 0.78rem;
+      padding: 0.85rem 1.5rem;
+    }
+  
+    .hero-h1 {
+      font-size: 1.8rem !important;
+      line-height: 1;
+    }
+  
+    .offer-h4,
+    .kf-h,
+    .tm-h5 {
+      font-size: 1.2rem;
+    }
+  
+    .testi-h1,
+    .ms-h1 {
+      font-size: 1.4rem;
+    }
+  
+    .form-cx h2 {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* ── FIX 16: Safe Area für iPhone Notch / Dynamic Island ── */
+  @supports (padding-top: env(safe-area-inset-top)) {
+    #hdr {
+      padding-top: calc(1rem + env(safe-area-inset-top));
+    }
+  
+    #hero {
+      padding-top: calc(80px + env(safe-area-inset-top));
+    }
+  }
+
+  /* ── HERO MOCKUP auf Mobile zeigen ── */
+@media (max-width: 768px) {
+  .hero-mockup {
+    display: block !important;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-mockup-inner {
+    aspect-ratio: auto;
+    height: 240px;
+    border-radius: 8px;
+  }
+
+  .mockup-cards {
+    gap: 0.5rem;
+    padding: 0.8rem;
+  }
+
+  .mock-card {
+    max-width: none !important;
+    flex: 1 !important;
+  }
+
+  .mock-card:nth-child(1) {
+    transform: rotate(-4deg) translateY(6px);
+  }
+
+  .mock-card:nth-child(2) {
+    transform: rotate(0deg) translateY(-8px);
+  }
+
+  .mock-card:nth-child(3) {
+    transform: rotate(4deg) translateY(5px);
+  }
+
+  .mock-photo {
+    min-height: 180px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-mockup-inner {
+    height: 200px;
+  }
+
+  .mock-photo {
+    min-height: 150px !important;
+  }
+}
